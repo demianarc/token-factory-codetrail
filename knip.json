@@ -8,6 +8,10 @@
     "scripts/nebius-smoke.mts",
     "scripts/record-demo.mts",
     "scripts/a11y.mts",
-    "scripts/screenshots.mts"
+    "scripts/screenshots.mts",
+    "showcase/main.js"
+  ],
+  "ignore": [
+    "showcase/style.css"
   ]
 }

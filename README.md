@@ -29,6 +29,23 @@ Getting to know a new codebase usually means hours of clicking through files. Co
 
 It's open source and runs on your own [Nebius Token Factory](https://dub.sh/aistudio) key. On DeepSeek V4.1 Flash 1017 a small repo costs 1–3 cents to read; Kimi K3.1 Pro, a much larger model, costs about 7× as much per token. Everything it writes is saved, so the next visit is free.
 
+## Token Factory edition
+
+Original build by [Studio1HQ](https://studio1hq.com), from [Codetrail](https://github.com/Studio1-OSS/Codetrail). This edition adds the official Token Factory design, self-hosted fonts and visible builder credits. See [edition provenance](BRAND-EDITION.md).
+
+### Explore the key-free sample
+
+```bash
+pnpm showcase:build
+python3 -m http.server 5177 --bind 127.0.0.1 --directory showcase-dist
+```
+
+Open http://127.0.0.1:5177. The five-step Polka tour is curated and checked against the pinned source revision. It makes no inference requests and cannot analyse another repository. The full application below provides that workflow with your Token Factory key. The included Polka source retains Luke Edwards' MIT notice.
+
+### Edition validation
+
+On 5 November 2026, all 135 unit tests, TypeScript, dead-code checks and the full production build passed. The build uses Next.js's supported Webpack path to work in environments that restrict Turbopack worker ports. No new live inference was run. Recorded upstream prices and cost comparisons below are historical examples, not current quotes. The dependency audit reports one moderate transitive esbuild development-server advisory; the static preview contains no esbuild server.
+
 ## What you get
 
 - **The whole repo, one prompt.** Files go in whole with line numbers, so a flow that crosses ten files stays whole.
@@ -105,8 +122,8 @@ Every call sends the same prefix, the whole repo with numbered lines, so after t
 All it needs is a [Nebius Token Factory](https://dub.sh/aistudio) API key. With [Docker](https://www.docker.com/products/docker-desktop):
 
 ```bash
-git clone https://github.com/Studio1-OSS/Codetrail.git
-cd Codetrail
+git clone https://github.com/demianarc/token-factory-codetrail.git
+cd token-factory-codetrail
 docker build -t codetrail .
 docker run --name codetrail -p 3000:3000 -e NEBIUS_API_KEY=your-key -v codetrail-data:/data -v ~/code:/repos:ro codetrail
 ```

@@ -16,7 +16,7 @@ function apply(mode: Mode) {
  * Runs before paint (inline in <head>) so a saved theme never flashes the other one. It also tells OpenUI not
  * to mount its development inspector, which would sit over the player controls (production never loads it).
  */
-export const themeScript = `try{var t=localStorage.getItem("${KEY}");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}globalThis[Symbol.for("openui.devtools.autoMount")]=true;`;
+export const themeScript = `try{var t=localStorage.getItem("${KEY}")||"dark";if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}globalThis[Symbol.for("openui.devtools.autoMount")]=true;`;
 
 export function ThemeToggle() {
   const [mode, setMode] = useState<Mode>("system");

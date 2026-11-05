@@ -8,3 +8,6 @@ next-env.d.ts
 codetrail.db*
 .next-check
 docs/demo-work
+
+showcase-dist/
+qa/

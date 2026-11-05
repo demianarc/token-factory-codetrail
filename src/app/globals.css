@@ -557,3 +557,10 @@ svg g[role="button"]:focus-visible > rect:first-of-type {
     display: none;
   }
 }
+
+/* Token Factory edition: official palette and locally hosted typography. */
+@font-face{font-family:Gramatika;src:url('/brand/fonts/GramatikaBold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:Inter;src:url('/brand/fonts/Inter-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+:root,:root[data-theme="dark"]{--font-geist:Inter;--font-martian:Gramatika;--font-geist-mono:ui-monospace;--color-ink:#001A2B;--color-night:#002638;--color-panel:#002638;--color-raised:#003044;--color-raised-2:#0A4566;--color-code:#001723;--color-outline:#355060;--color-line:#254655;--color-fg:#F0F8FF;--color-fg-2:#b8cbd8;--color-fg-3:#9db5c5;--color-trail:#DAFF33;--color-trail-text:#DAFF33;--color-focus:#DAFF33;--color-trail-strong:#E0FF4F;--color-trail-soft:rgb(218 255 51/.12);--color-trail-ink:#052B42;--color-contour:rgb(218 255 51/.16)}
+:root[data-theme="light"]{--font-geist:Inter;--font-martian:Gramatika;--font-geist-mono:ui-monospace;--color-ink:#F0F8FF;--color-night:#e7f0f6;--color-panel:#fff;--color-raised:#e6f0f6;--color-raised-2:#d4e4ef;--color-outline:#b8cfde;--color-line:#cadde9;--color-fg:#052B42;--color-fg-2:#29495c;--color-fg-3:#486574;--color-trail:#DAFF33;--color-trail-text:#526400;--color-focus:#526400;--color-trail-ink:#052B42}
+.tf-logo img{display:block;flex-shrink:0}.tf-logo span{border-left:1px solid var(--color-line);padding-left:12px}::selection{background:rgb(218 255 51/.25)}

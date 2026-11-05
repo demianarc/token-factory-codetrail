@@ -309,7 +309,7 @@ export default async function Home() {
       </main>
 
       <footer className="mx-auto flex max-w-[1240px] flex-wrap justify-between gap-3 border-t border-line px-4 py-7 font-mono text-[11px] tracking-[0.12em] text-fg-3 uppercase sm:px-6">
-        <span>Codetrail · open source · bring your own Nebius key</span>
+        <span>Original build by <a href="https://studio1hq.com">Studio1HQ</a> · <a href="https://github.com/Studio1-OSS/Codetrail">Original source</a> · TF edition</span>
         <span>Built on {MODEL_LABEL} · runs on Nebius Token Factory</span>
       </footer>
     </div>
